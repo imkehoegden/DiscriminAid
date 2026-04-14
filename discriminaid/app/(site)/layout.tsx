@@ -8,9 +8,11 @@ export default function SiteLayout({
 }>) {
   return (
     <>
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
+      <div>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }

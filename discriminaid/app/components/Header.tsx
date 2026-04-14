@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <nav
-        className="flex items-center justify-between px-15 py-10 gap-8 sticky"
+        className="flex items-center justify-between px-20 py-10 gap-8 sticky"
         style={{ color: "var(--primarytext)" }}
       >
         <div>
@@ -20,7 +20,7 @@ export default function Header() {
             />
           </Link>
         </div>
-        <ul className="flex p-8 gap-8 items-center font-bold">
+        <ul className="flex gap-8 items-center font-bold">
           <li>
             <Link href="/about">Wer wir sind</Link>
           </li>
