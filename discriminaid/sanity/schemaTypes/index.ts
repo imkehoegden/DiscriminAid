@@ -1,9 +1,10 @@
 import { type SchemaTypeDefinition } from "sanity";
-import { post } from "./post";
 import heroSlider from "./heroSlider";
+import video from "./video";
+import homePage from "./homePage";
 
-export const schemaTypes = [heroSlider, post];
-
-// export const schema: { types: SchemaTypeDefinition[] } = {
-//   types: [],
-// };
+export const schemaTypes: SchemaTypeDefinition[] = [
+  heroSlider,
+  video,
+  homePage,
+];
