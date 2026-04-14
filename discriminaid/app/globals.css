@@ -36,12 +36,27 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-ul {
+.nav {
+  color: var(--primarytext);
   font-family: var(--font-headings);
+  margin: 0;
 }
+
+.donateButton {
+  padding: 10px 20px;
+  color: #000;
+  background-color: var(--fourth);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.donateButton:hover {
+  background-color: var(--primarytext);
+  color: var(--background);
+  transition: all 0.3s ease;
+}
+
 /* 
 @keyframes gradientMove {
   0% {

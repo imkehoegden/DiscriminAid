@@ -52,17 +52,23 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
           </p> */}
           <Link
             href={current.link}
-            className="inline-block mt-6 text-xl md:text-2xl opacity-90 underline underline-offset-4 hover:opacity-70 transition"
+            className="inline-block mt-6 text-xl md:text-2xl opacity-90 underline underline-offset-4 hover:text-[var(--secondarytext)] transition"
           >
             {current.subtitle}
           </Link>
         </div>
 
         <div className="absolute bottom-8 flex justify-center items-center gap-10 text-6xl w-full left-0">
-          <button onClick={prevSlide} className="hover:scale-125 transition">
+          <button
+            onClick={prevSlide}
+            className="cursor-pointer hover:scale-125 transition"
+          >
             ‹
           </button>
-          <button onClick={nextSlide} className="hover:scale-125 transition">
+          <button
+            onClick={nextSlide}
+            className="cursor-pointer hover:scale-125 transition"
+          >
             ›
           </button>
         </div>

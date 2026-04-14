@@ -22,28 +22,32 @@ export default function Header() {
         </div>
         <ul className="flex gap-8 items-center font-bold">
           <li>
-            <Link href="/about">Wer wir sind</Link>
+            <Link
+              href="/about"
+              className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+            >
+              Wer wir sind
+            </Link>
           </li>
           <li>
-            <Link href="/service">Unterstützung finden</Link>
+            <Link
+              href="/service"
+              className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+            >
+              Unterstützung finden
+            </Link>
           </li>
           <li>
-            <Link href="/magazin">Stimmen & Magazin</Link>
+            <Link
+              href="/magazin"
+              className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+            >
+              Stimmen & Magazin
+            </Link>
           </li>
           <li>
-            <Link href="/spenden">
-              <button
-                style={{
-                  padding: "8px 16px",
-                  color: "#000",
-                  background: "var(--fourth)",
-                  borderRadius: "20px",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Spenden! ♥
-              </button>
+            <Link href="/spenden" className="cursor-pointer">
+              <button className="donateButton">Spenden! ♥</button>
             </Link>
           </li>
         </ul>
