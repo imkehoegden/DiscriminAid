@@ -4,20 +4,34 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ variant = "transparentOnHero" }) {
   const [scrolled, setScrolled] = useState(false);
 
+  const isTransparentHero = variant === "transparentOnHero";
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 0); // setScrolled(window.scrollY > window.innerHeight * 0.8); Header wird erst weiß, wenn 80% der Bildschirmhöhe gescrollt hast
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
   useEffect(() => {
+    if (!isTransparentHero) return;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight * 0.8);
+      setScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isTransparentHero]);
 
   return (
-    // <header className="fixed top-0 left-0 w-full z-50">
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         scrolled ? "bg-white" : "bg-transparent"

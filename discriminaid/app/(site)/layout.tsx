@@ -9,7 +9,8 @@ export default function SiteLayout({
   return (
     <>
       <div>
-        <Header />
+        <Header variant="transparentOnHero" />{" "}
+        {/* auf anderen Seiten: <Header variant="solid" /> verwenden */}
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
