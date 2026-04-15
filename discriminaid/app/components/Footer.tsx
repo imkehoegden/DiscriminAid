@@ -30,7 +30,12 @@ export default function Footer() {
           </Link>
         </li>
         <li>
-          <Link href="/https://www.instagram.com">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
             <Image
               src="/icon-instagram-50-white.png"
               alt="Icon Instagram"
@@ -39,7 +44,7 @@ export default function Footer() {
               loading="eager"
               className="h-auto w-auto"
             />
-          </Link>
+          </a>
         </li>
       </ul>
     </footer>

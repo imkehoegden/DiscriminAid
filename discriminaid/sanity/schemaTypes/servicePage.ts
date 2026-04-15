@@ -1,7 +1,7 @@
 export default {
   name: "servicePage",
   type: "document",
-  title: "Service Seite",
+  title: "Service / Klient:innen",
 
   fields: [
     {

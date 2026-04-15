@@ -1,7 +1,7 @@
 export default {
   name: "aboutPage",
   type: "document",
-  title: "About Seite",
+  title: "About / Team",
 
   fields: [
     {

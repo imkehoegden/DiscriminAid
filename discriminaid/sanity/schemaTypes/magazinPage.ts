@@ -1,7 +1,7 @@
 export default {
   name: "magazinPage",
   type: "document",
-  title: "Magazin Seite",
+  title: "Magazin",
 
   fields: [
     {

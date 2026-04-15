@@ -59,9 +59,9 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Primary (orange)", value: "primary" },
-          { title: "Secondary (lila)", value: "secondary" },
-          { title: "Fourth (pink)", value: "fourth" },
+          { title: "Orange", value: "primary" },
+          { title: "Lila", value: "secondary" },
+          { title: "Pink", value: "fourth" },
         ],
         layout: "radio",
       },
@@ -72,8 +72,8 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Background (weiß)", value: "background" },
-          { title: "Primary Text (schwarz)", value: "primarytext" },
+          { title: "Weiß", value: "background" },
+          { title: "Schwarz", value: "primarytext" },
         ],
         layout: "radio",
       },
