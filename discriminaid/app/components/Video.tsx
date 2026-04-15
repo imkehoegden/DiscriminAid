@@ -1,18 +1,22 @@
+import Section from "./Section";
+
 type VideoProps = {
   title?: string;
   subtitle?: string;
   url: string;
 };
 
+// Title und Subtitle sind optional.
+
 export default function Video({ title, subtitle, url }: VideoProps) {
   if (!url) return null;
 
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-16">
-      <div className="mb-6 text-center">
-        {title && <h2 className="text-4xl font-bold">{title}</h2>}
+    <Section>
+      <div className="mb-6">
+        {title && <h2 className="text-4xl md:text-5xl font-bold">{title}</h2>}
 
-        {subtitle && <p className="text-lg opacity-70 mt-2">{subtitle}</p>}
+        {subtitle && <p className="text-xl md:text-2xl mt-4">{subtitle}</p>}
       </div>
       <div className="w-full aspect-video">
         <iframe
@@ -22,6 +26,6 @@ export default function Video({ title, subtitle, url }: VideoProps) {
           allowFullScreen
         />
       </div>
-    </section>
+    </Section>
   );
 }

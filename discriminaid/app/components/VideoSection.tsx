@@ -1,3 +1,7 @@
 export function VideoSection({ children }: { children: React.ReactNode }) {
-  return <section className="max-w-7xl mx-auto px-6 py-20">{children}</section>;
+  return (
+    <section className="max-w-6xl px-12 py-16 mx-auto">
+      {children}
+    </section>
+  );
 }

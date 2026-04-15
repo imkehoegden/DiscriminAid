@@ -7,12 +7,12 @@ export default {
     {
       name: "title",
       type: "string",
-      title: "Headline",
+      title: "Headline (optional)",
     },
     {
       name: "subtitle",
       type: "string",
-      title: "Subtitle",
+      title: "Subtitle (optional)",
     },
     {
       name: "url",

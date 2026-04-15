@@ -13,7 +13,7 @@ type Slide = {
 export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const [index, setIndex] = useState(0);
 
-  if (!slides?.length) return null; // Fragezeichen hinzugefügt, damit App nicht crasht, wenn slides undefined ist.
+  if (!slides?.length) return null; // Fragezeichen hinzugefügt, damit App nicht crasht, wenn slides undefined ist. // greift also nur auf length zu, wenn slides "existiert"
 
   const current = slides[index];
 

@@ -1,7 +1,7 @@
 export default {
   name: "heroSlider",
   title: "Hero Slider",
-  type: "document",
+  type: "object",
   fields: [
     {
       name: "slides",
