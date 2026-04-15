@@ -40,7 +40,7 @@ export default {
     {
       name: "link",
       type: "object",
-      title: "Link (optional",
+      title: "Link (optional)",
       fields: [
         {
           name: "text",
