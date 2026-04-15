@@ -1,17 +1,25 @@
+"use client";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { usePathname } from "next/navigation";
 
 export default function SiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
     <>
       <div>
         <Header variant="transparentOnHero" />{" "}
         {/* auf anderen Seiten: <Header variant="solid" /> verwenden */}
-        <main className="flex-1">{children}</main>
+        <main className={`flex-1 ${isHome ? "pt-0" : "pt-36"}`}>
+          {children}
+        </main>
         <Footer />
       </div>
     </>

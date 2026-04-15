@@ -78,11 +78,19 @@ export default function Header({ variant = "transparentOnHero" }) {
               Stimmen & Magazin
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/spenden" className="cursor-pointer">
               <button className="donateButton">Spenden! ♥</button>
             </Link>
-          </li>
+          </li> */}
+          <a
+            href="https://www.gofundme.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <button className="donateButton">Spenden! ♥</button>
+          </a>
         </ul>
       </nav>
     </header>

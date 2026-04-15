@@ -72,8 +72,10 @@ export default function InfoBlock({
       </div>
 
       <div
-        className={`w-full flex justify-center md:justify-end ${isLeft ? "md:order-1" : ""}`}
+        className={`w-full flex justify-center ${isLeft ? "md:justify-start md:order-1" : "md:justify-end md:order-2"}`}
       >
+        {" "}
+        {/* mit "md:justify-end" sieht es noch besser aus, funktioniert aber nicht für variante mit erst bild und dann text */}
         <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden rounded-2xl">
           <Image
             src={urlFor(image).url()}
