@@ -13,17 +13,17 @@ type Slide = {
 export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const [index, setIndex] = useState(0);
 
-  if (!slides?.length) return null;
+  if (!slides?.length) return null; // Fragezeichen hinzugefügt, damit App nicht crasht, wenn slides undefined ist.
 
   const current = slides[index];
 
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % slides.length);
-  };
+  function nextSlide() {
+    setIndex((prev) => (prev + 1) % slides.length); // modulo brauche ich, damit "Carousel" entsteht, also ein endloser Kreislauf :)
+  }
 
-  const prevSlide = () => {
+  function prevSlide() {
     setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  }
 
   return (
     <section
