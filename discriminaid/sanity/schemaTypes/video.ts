@@ -1,3 +1,7 @@
+// object schema
+
+// name ist hier der key // also später in einer page: content: [{ type: "video" }]
+
 export default {
   name: "video",
   type: "object",

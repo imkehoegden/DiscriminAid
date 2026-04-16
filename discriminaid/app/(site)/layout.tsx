@@ -17,7 +17,7 @@ export default function SiteLayout({
       <div>
         <Header variant="transparentOnHero" />{" "}
         {/* auf anderen Seiten: <Header variant="solid" /> verwenden */}
-        <main className={`flex-1 ${isHome ? "pt-0" : "pt-36"}`}>
+        <main className={`flex-1 min-h-[88.3vh] ${isHome ? "pt-0" : "pt-36"}`}>
           {children}
         </main>
         <Footer />

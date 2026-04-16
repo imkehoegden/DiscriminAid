@@ -45,15 +45,19 @@ export default {
           name: "internalLink",
           type: "string",
           title: "Interner Link (z. B. /about)",
-          //   hidden: ({ parent }) => !parent || parent.type !== "internal",
+          // @ts-ignore
+          hidden: ({ parent }) => parent?.type !== "internal",
         },
         {
           name: "externalLink",
           type: "url",
           title: "Externer Link",
-          //   hidden: ({ parent }) => !parent || parent.type !== "external",
+          // @ts-ignore
+          hidden: ({ parent }) => parent?.type !== "external",
         },
       ],
     },
   ],
 };
+
+// hidden "entscheidet" darüber, ob das Feld im Sanity Studio angezeigt wird. mein parent ist link, also das übergrordnete objekt. // bedungung 1 sagt also, zeige dieses feld im studio also nur an, wenn der type internal ist. // wenn ich also intern auswähle, kann ich auch nur internalLink auswählen.
