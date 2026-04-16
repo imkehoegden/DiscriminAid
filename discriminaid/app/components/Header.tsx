@@ -9,15 +9,6 @@ export default function Header({ variant = "transparentOnHero" }) {
 
   const isTransparentHero = variant === "transparentOnHero";
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 0); // setScrolled(window.scrollY > window.innerHeight * 0.8); Header wird erst weiß, wenn 80% der Bildschirmhöhe gescrollt hast
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   useEffect(() => {
     if (!isTransparentHero) return;
 

@@ -6,8 +6,6 @@ type VideoProps = {
   url: string;
 };
 
-// Title und Subtitle sind optional.
-
 export default function Video({ title, subtitle, url }: VideoProps) {
   if (!url) return null;
 

@@ -42,6 +42,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
         <span></span>
         <span></span>
       </div>
+
       <div className="z-10 text-center flex flex-col gap-10 max-w-3xl">
         <div>
           <h1 className="text-6xl md:text-7xl font-bold leading-tight">

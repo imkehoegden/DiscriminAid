@@ -12,6 +12,7 @@ export default {
       name: "content",
       type: "array",
       of: [{ type: "infoBlock" }],
+      // of: [{ type: "infoBlock" }, { type: "video" }, { type: "textBlock" }],
     },
   ],
 };
