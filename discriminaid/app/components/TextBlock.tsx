@@ -15,9 +15,7 @@ export default function TextBlock({ title, subtitle, text }: TextBlockProps) {
       <div className="flex flex-col gap-6 max-w-3xl">
         {title && <h2 className="text-4xl md:text-5xl font-bold">{title}</h2>}
 
-        {subtitle && (
-          <p className="text-xl md:text-2xl text-gray-600">{subtitle}</p>
-        )}
+        {subtitle && <p className="text-xl md:text-2xl">{subtitle}</p>}
 
         <div className="prose prose-lg">
           {" "}
