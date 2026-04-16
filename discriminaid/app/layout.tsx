@@ -41,7 +41,6 @@ export default function RootLayout({
       className={`${openSans.variable} ${raleway.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
-      {/* min-h-full flex flex-col */}
     </html>
   );
 }
