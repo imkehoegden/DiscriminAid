@@ -19,7 +19,7 @@ export default function TextBlock({ title, subtitle, text }: TextBlockProps) {
 
         <div className="prose prose-lg">
           {" "}
-          {/* prose macht automatisch, schöne Paragraphen, Abstände, Listen und Überschriften */}
+          {/* tw prose macht automatisch, schöne Paragraphen, Abstände, Listen und Überschriften */}
           <PortableText value={text} />
         </div>
       </div>
