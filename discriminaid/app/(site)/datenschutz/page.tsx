@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/app/components/ScrollToTopButton";
 import TextBlock from "@/app/components/TextBlock";
 import { client } from "@/sanity/lib/client";
 
@@ -31,6 +32,7 @@ export default async function DataprivacyPage() {
             return null;
         }
       })}
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -42,6 +42,16 @@ h2,
   transition: all 0.3s ease;
 }
 
+.scrollToTopButton {
+  padding: 10px 20px;
+  color: var(--background);
+  background-color: var(--secondary);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .hero {
   position: relative;
   height: 100vh;

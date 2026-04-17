@@ -6,3 +6,5 @@ export const client = createClient({
   apiVersion: "2026-04-13",
   useCdn: true,
 });
+
+// hier verbinde ich mein frontend mit sanity

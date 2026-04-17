@@ -1,5 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import MagazinBlock from "@/app/components/MagazinBlock";
+import ScrollToTopButton from "@/app/components/ScrollToTopButton";
 
 export default async function MagazinPage() {
   const magazinePage = await client.fetch(`
@@ -41,6 +42,7 @@ export default async function MagazinPage() {
           }
         })}
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -17,3 +17,9 @@ export { metadata, viewport } from "next-sanity/studio";
 export default function StudioPage() {
   return <NextStudio config={config} />;
 }
+
+// NextStudio rendert das Sanity Studio UI
+// config = mein Sanity Projekt (Schemas, Dataset, Project ID etc.)
+// diese page.tsx ist mein Next.js Route Handler
+
+// ohne diese datei: gibt es kein /studio in meiner app, also mein cms wäre nicht erreichbar

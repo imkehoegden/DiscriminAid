@@ -1,5 +1,6 @@
 import TextBlock from "@/app/components/TextBlock";
 import { client } from "@/sanity/lib/client";
+import ScrollToTopButton from "@/app/components/ScrollToTopButton";
 
 export default async function ImprintPage() {
   const imprintPage = await client.fetch(`
@@ -32,6 +33,7 @@ export default async function ImprintPage() {
             return null;
         }
       })}
+      <ScrollToTopButton />
     </div>
   );
 }

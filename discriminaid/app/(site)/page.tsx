@@ -3,6 +3,7 @@ import Video from "../components/Video";
 import { client } from "../../sanity/lib/sanity";
 import { VideoSection } from "../components/VideoSection";
 import InfoBlock from "../components/InfoBlock";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default async function Home() {
   // const homePage = await client.fetch(`
@@ -56,6 +57,7 @@ export default async function Home() {
             return null;
         }
       })}
+      <ScrollToTopButton />
     </>
   );
 }
