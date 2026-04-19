@@ -1,9 +1,3 @@
-// import CookieConsent from "react-cookie-consent";
-
-// export default function CookieBanner() {
-//   return <CookieConsent>Diese Website nutzt Cookies.</CookieConsent>;
-// }
-
 "use client";
 
 import CookieConsent from "react-cookie-consent";
@@ -16,10 +10,10 @@ export default function CookieBanner() {
       enableDeclineButton
       declineButtonText="Nicht laden"
       onAccept={() => {
-        window.location.reload();
+        localStorage.setItem("vimeo_consent", "true");
       }}
       onDecline={() => {
-        window.location.reload();
+        localStorage.setItem("vimeo_consent", "false");
       }}
     >
       Dieses Video wird über Vimeo eingebettet. Dabei können Cookies gesetzt
@@ -27,3 +21,5 @@ export default function CookieBanner() {
     </CookieConsent>
   );
 }
+
+// setzt Consent, Video-Komponente liest Consent wiederum aus

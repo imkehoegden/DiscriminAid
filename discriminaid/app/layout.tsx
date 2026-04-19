@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Raleway } from "next/font/google";
 import "./globals.css";
+// import CookieBanner from "./components/CookieBanner";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${openSans.variable} ${raleway.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+      {/* <CookieBanner /> */}
     </html>
   );
 }

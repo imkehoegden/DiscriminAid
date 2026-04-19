@@ -85,14 +85,14 @@ export default function InfoBlock({
               href={normalizedLink.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition ${textMap[textColor]}`}
+              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition text-base md:text-lg ${textMap[textColor]}`}
             >
               {normalizedLink.text} <span className="text-xl">›</span>
             </a>
           ) : (
             <Link
               href={normalizedLink.href}
-              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition ${textMap[textColor]}`}
+              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition text-base md:text-lg ${textMap[textColor]}`}
             >
               {normalizedLink.text} <span className="text-xl">›</span>
             </Link>

@@ -52,7 +52,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
             href={current.link}
             className="inline-block mt-6 text-xl md:text-2xl opacity-90 underline underline-offset-4 hover:text-[var(--secondarytext)] transition"
           >
-            {current.subtitle}
+            {current.subtitle} <span className="text-2xl">›</span>
           </Link>
         </div>
 
