@@ -8,10 +8,10 @@ export default function Header({ variant = "transparentOnHero" }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = openMenu ? "hidden" : "auto";
+    document.body.style.overflow = openMenu ? "hidden" : "auto"; // wenn menü offen ist, kann seine nicht scrollen
   }, [openMenu]);
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // für weißen header
 
   const isTransparentHero = variant === "transparentOnHero";
 
@@ -22,7 +22,7 @@ export default function Header({ variant = "transparentOnHero" }) {
       setScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll); // damit scroll funktioniert
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -108,11 +108,12 @@ export default function Header({ variant = "transparentOnHero" }) {
           </button>
         </nav>
       </header>
+      {/* overlay für mobile menü, also wenn openMenu = true, dann Fullscreen Menü */}
       {openMenu && (
         <div className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center justify-center gap-8 md:hidden font-bold">
           <Link
             href="/about"
-            onClick={() => setOpenMenu(false)}
+            onClick={() => setOpenMenu(false)} {/* zum schließen des menüs */}
             className="nav"
           >
             Wer wir sind

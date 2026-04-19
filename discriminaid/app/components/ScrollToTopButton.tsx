@@ -1,4 +1,4 @@
-"use client";
+"use client"; // für window-Interaktion
 
 export default function ScrollToTopButton() {
   function scrollToTop() {
