@@ -91,18 +91,18 @@ export default function Header({ variant = "transparentOnHero" }) {
             aria-label={openMenu ? "Menü schließen" : "Menü öffnen"}
           >
             <span
-              className={`block w-8 h-0.5 transition duration-300 bg-black ${
-                openMenu ? "rotate-45 translate-y-2" : ""
+              className={`block w-8 h-1 transition duration-300 bg-black ${
+                openMenu ? "rotate-45 translate-y-2.5" : ""
               }`}
             />
             <span
-              className={`block w-8 h-0.5 transition bg-black ${
+              className={`block w-8 h-1 transition bg-black ${
                 openMenu ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`block w-8 h-0.5 transition duration-300 bg-black ${
-                openMenu ? "-rotate-45 -translate-y-2" : ""
+              className={`block w-8 h-1 transition duration-300 bg-black ${
+                openMenu ? "-rotate-45 -translate-y-2.5" : ""
               }`}
             />
           </button>
@@ -113,7 +113,7 @@ export default function Header({ variant = "transparentOnHero" }) {
         <div className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center justify-center gap-8 md:hidden font-bold">
           <Link
             href="/about"
-            onClick={() => setOpenMenu(false)} {/* zum schließen des menüs */}
+            onClick={() => setOpenMenu(false)}
             className="nav"
           >
             Wer wir sind

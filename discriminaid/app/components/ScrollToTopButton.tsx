@@ -13,7 +13,7 @@ export default function ScrollToTopButton() {
         onClick={scrollToTop}
         className="scrollToTopButton flex items-center gap-2"
       >
-        Nach oben <span className="text-xl">›</span>
+        Nach oben <span className="text-xl">▴</span>
       </button>
     </section>
   );

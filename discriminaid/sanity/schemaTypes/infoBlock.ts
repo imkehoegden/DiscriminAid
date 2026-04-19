@@ -49,7 +49,7 @@ export default {
         {
           name: "href",
           type: "string",
-          description: "z. B. about oder service",
+          description: "z. B. intern: about oder extern: https://www.abc.de",
         },
       ],
     },

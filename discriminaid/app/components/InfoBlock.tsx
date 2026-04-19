@@ -12,8 +12,8 @@ type InfoBlockProps = {
   image: string;
   imagePosition: "left" | "right";
   link?: {
-    text: string;
-    href: string;
+    text?: string;
+    href?: string;
   };
   backgroundColor: "primary" | "secondary" | "fourth";
   textColor: "background" | "primarytext";
@@ -29,7 +29,6 @@ export default function InfoBlock({
   backgroundColor = "secondary",
   textColor = "background",
 }: InfoBlockProps) {
-  // console.log(image);
   const isLeft = imagePosition === "left";
 
   const bgMap = {
@@ -42,6 +41,25 @@ export default function InfoBlock({
     background: "text-[var(--background)]",
     primarytext: "text-[var(--primarytext)]",
   };
+
+  const isExternal = (url?: string) => {
+    if (!url) return false;
+
+    return (
+      url.startsWith("http://") ||
+      url.startsWith("https://") ||
+      url.startsWith("mailto:") ||
+      url.includes("@")
+    );
+  };
+
+  // console.log(link);
+
+  const normalizedLink = link?.href
+    ? link
+    : link?.link
+      ? { text: link.text, href: link.link }
+      : undefined;
 
   return (
     <Section
@@ -61,21 +79,29 @@ export default function InfoBlock({
 
         <p className={`text-base md:text-lg ${textMap[textColor]}`}>{text}</p>
 
-        {link && (
-          <Link
-            href={link.href}
-            className={`inline-block mt-4 underline underline-offset-4 hover:text-[var(--secondarytext)] transition ${textMap[textColor]}`}
-          >
-            {link.text} <span className="text-xl">›</span>
-          </Link>
-        )}
+        {normalizedLink?.href &&
+          (isExternal(normalizedLink.href) ? (
+            <a
+              href={normalizedLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition ${textMap[textColor]}`}
+            >
+              {normalizedLink.text} <span className="text-xl">›</span>
+            </a>
+          ) : (
+            <Link
+              href={normalizedLink.href}
+              className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition ${textMap[textColor]}`}
+            >
+              {normalizedLink.text} <span className="text-xl">›</span>
+            </Link>
+          ))}
       </div>
 
       <div
         className={`w-full flex justify-center ${isLeft ? "md:justify-start md:order-1" : "md:justify-end md:order-2"}`}
       >
-        {" "}
-        {/* mit "md:justify-end" sieht es noch besser aus, funktioniert aber nicht für variante mit erst bild und dann text */}
         <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden rounded-2xl">
           <Image
             src={urlFor(image).url()}
