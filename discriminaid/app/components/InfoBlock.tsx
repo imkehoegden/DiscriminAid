@@ -66,7 +66,7 @@ export default function InfoBlock({
             href={link.href}
             className={`inline-block mt-4 underline underline-offset-4 hover:text-[var(--secondarytext)] transition ${textMap[textColor]}`}
           >
-            {link.text} →
+            {link.text} <span className="text-xl">›</span>
           </Link>
         )}
       </div>
