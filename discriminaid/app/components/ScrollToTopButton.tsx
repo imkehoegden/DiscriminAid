@@ -5,6 +5,8 @@ export default function ScrollToTopButton() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  // window.scrollTo() ist eine engebaute Browser-Funktion, die besagt, zu welcher Position gescrollt werden soll und wie
+
   return (
     <section className="w-full py-16 flex justify-center items-center">
       <button
