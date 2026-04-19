@@ -37,3 +37,5 @@ export default {
     },
   ],
 };
+
+// Schema für ein Dokument in Sanity // Content-Typ

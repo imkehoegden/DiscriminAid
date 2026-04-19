@@ -14,7 +14,6 @@ export default async function ImprintPage() {
         text
       }
     }}`);
-  // nochmal zu type lesen!
 
   if (!imprintPage) return null;
 

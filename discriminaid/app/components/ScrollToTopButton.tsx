@@ -6,9 +6,12 @@ export default function ScrollToTopButton() {
   }
 
   return (
-    <section className="w-full py-16 flex justify-center">
-      <button onClick={scrollToTop} className="scrollToTopButton">
-        Nach oben ▲
+    <section className="w-full py-16 flex justify-center items-center">
+      <button
+        onClick={scrollToTop}
+        className="scrollToTopButton flex items-center gap-2"
+      >
+        Nach oben <span className="text-xl">›</span>
       </button>
     </section>
   );

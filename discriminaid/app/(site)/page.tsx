@@ -6,13 +6,6 @@ import InfoBlock from "../components/InfoBlock";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default async function Home() {
-  // const homePage = await client.fetch(`
-  //   *[_type == "homePage"][0]{
-  //     hero,
-  //     infoBlock,
-  //     video
-  //   }
-  // `);
   const homePage = await client.fetch(`
   *[_type == "homePage"][0]{
     content
@@ -61,6 +54,16 @@ export default async function Home() {
     </>
   );
 }
+
+// VORHERIGE VERSION OHNE FLEXIBLE ANPASSUNG VON SCHEMATA / BLOCKS:
+
+// const homePage = await client.fetch(`
+//   *[_type == "homePage"][0]{
+//     hero,
+//     infoBlock,
+//     video
+//   }
+// `);
 
 //  <>
 //       <HeroSlider slides={homePage?.hero?.slides || []} />
