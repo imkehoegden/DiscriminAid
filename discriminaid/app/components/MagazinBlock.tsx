@@ -42,14 +42,14 @@ export default function MagazinBlock({
             rel="noopener noreferrer"
             className="underline hover:text-[var(--secondarytext)] transition"
           >
-            {link.text} →
+            {link.text} <span className="text-xl">›</span>
           </a>
         ) : (
           <Link
             href={href}
             className="underline hover:text-[var(--secondarytext)] transition"
           >
-            {link.text} →
+            {link.text} <span className="text-xl">›</span>
           </Link>
         ))}
     </article>
