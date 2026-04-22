@@ -1,6 +1,7 @@
 "use client";
 
 import Section from "./Section";
+import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
 
 type VideoProps = {
@@ -12,20 +13,22 @@ type VideoProps = {
 export default function Video({ title, subtitle, url }: VideoProps) {
   if (!url) return null;
 
-  // const [consent, setConsent] = useState(false);
+  const [consent, setConsent] = useState(false);
 
-  // useEffect(() => {
-  //   const updateConsent = () => {
-  //     setConsent(localStorage.getItem("vimeo_consent") === "true");
-  //   };
+  useEffect(() => {
+    const checkConsent = () => {
+      setConsent(Cookies.get("vimeo_consent") === "true");
+    };
 
-  //   updateConsent();
+    checkConsent();
 
-  //   window.addEventListener("vimeo_consent_change", updateConsent);
+    window.addEventListener("vimeo_consent_change", checkConsent);
 
-  //   return () =>
-  //     window.removeEventListener("vimeo_consent_change", updateConsent);
-  // }, []);
+    return () =>
+      window.removeEventListener("vimeo_consent_change", checkConsent);
+  }, []);
+
+  const embedUrl = url.replace("vimeo.com", "player.vimeo.com/video");
 
   return (
     <Section>
@@ -34,28 +37,20 @@ export default function Video({ title, subtitle, url }: VideoProps) {
 
         {subtitle && <p className="text-xl md:text-2xl mt-4">{subtitle}</p>}
       </div>
-      {/* {consent ? (
+      {consent ? (
         <div className="w-full aspect-video">
           <iframe
-            src={`${url.replace("vimeo.com", "player.vimeo.com/video")}`}
+            src={embedUrl}
             className="w-full h-full rounded-xl"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            loading="eager"
           />
         </div>
       ) : (
-        <p>Bitte Cookies akzeptieren, um das Video zu sehen.</p>
-      )} */}
-      <div className="w-full aspect-video">
-        <iframe
-          src={`${url.replace("vimeo.com", "player.vimeo.com/video")}`}
-          className="w-full h-full rounded-xl"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          loading="eager"
-        />
-      </div>
+        <p className="text-base md:text-lg font-[var(--font-body)]">
+          Bitte akzeptiere Cookies, um dieses Video anzuzeigen.
+        </p>
+      )}
     </Section>
   );
 }

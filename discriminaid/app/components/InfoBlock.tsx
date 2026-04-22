@@ -53,8 +53,6 @@ export default function InfoBlock({
     );
   };
 
-  // console.log(link);
-
   const normalizedLink = link?.href
     ? link
     : link?.link
@@ -109,6 +107,7 @@ export default function InfoBlock({
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
+            loading="eager"
           />
         </div>
       </div>

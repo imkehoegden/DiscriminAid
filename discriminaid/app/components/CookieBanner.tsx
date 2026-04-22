@@ -1,6 +1,7 @@
 "use client";
 
 import CookieConsent from "react-cookie-consent";
+import Cookies from "js-cookie";
 
 export default function CookieBanner() {
   return (
@@ -10,14 +11,38 @@ export default function CookieBanner() {
       enableDeclineButton
       declineButtonText="Nicht laden"
       onAccept={() => {
-        localStorage.setItem("vimeo_consent", "true");
+        Cookies.set("vimeo_consent", "true");
+        window.dispatchEvent(new Event("vimeo_consent_change"));
       }}
       onDecline={() => {
-        localStorage.setItem("vimeo_consent", "false");
+        Cookies.set("vimeo_consent", "false");
+        window.dispatchEvent(new Event("vimeo_consent_change"));
+      }}
+      style={{
+        background: "#5b2c83",
+        color: "#fff",
+        fontSize: "16px",
+      }}
+      buttonStyle={{
+        background: "#f08a24",
+        color: "black",
+        borderRadius: "30px",
+        padding: "10px 20px",
+        fontFamily: "var(--font-headings)",
+        fontWeight: 600,
+      }}
+      declineButtonStyle={{
+        background: "transparent",
+        color: "#ffffff",
+        border: "1px solid #ffffff",
+        borderRadius: "30px",
+        padding: "10px 20px",
+        fontFamily: "var(--font-headings)",
+        fontWeight: 600,
       }}
     >
-      Dieses Video wird über Vimeo eingebettet. Dabei können Cookies gesetzt
-      werden.
+      Dieses Video wird über Vimeo geladen. Dabei können Cookies von Vimeo
+      gesetzt werden.
     </CookieConsent>
   );
 }

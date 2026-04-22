@@ -35,16 +35,20 @@ export default function Header({ variant = "transparentOnHero" }) {
           scrolled ? "bg-white" : "bg-transparent"
         }`}
       >
-        <nav className="flex items-center justify-between px-20 py-10 gap-8 sticky text-[var(--primarytext)]">
-          <div>
-            <Link href="/">
+        <nav className="flex items-center justify-between px-6 md:px-10 lg:px-20 py-6 md:py-8 lg:py-10 gap-8 sticky text-[var(--primarytext)]">
+          <div className="relative h-10 md:h-16 lg:h-24 w-[180px] md:w-[240px] lg:w-[350px]">
+            <Link href="/" className="relative block w-full h-full">
               <Image
                 src="/DiscriminAid_Logo_ohneClaim_Freisteller.png"
                 alt="DiscriminAid Logo"
-                width={350}
-                height={91}
-                loading="eager"
-                className="h-10 md:h-24 w-auto"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 180px, (max-width: 1024px) 240px, 350px"
+                // width={350}
+                // height={91}
+                // loading="eager"
+                // className="h-10 md:h-16 lg:h-24 w-auto"
               />
             </Link>
           </div>
@@ -74,7 +78,7 @@ export default function Header({ variant = "transparentOnHero" }) {
               </Link>
             </li>
             <a
-              href="https://www.gofundme.com"
+              href="https://bcause.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
