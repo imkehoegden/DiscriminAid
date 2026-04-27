@@ -4,29 +4,25 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header({ variant = "transparentOnHero" }) {
+export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = openMenu ? "hidden" : "auto"; // wenn menü offen ist, kann seine nicht scrollen
+    document.body.style.overflow = openMenu ? "hidden" : "auto"; // wenn menü offen ist, kann seite nicht scrollen
   }, [openMenu]);
 
   const [scrolled, setScrolled] = useState(false); // für weißen header
 
-  const isTransparentHero = variant === "transparentOnHero";
-
   useEffect(() => {
-    if (!isTransparentHero) return;
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll", handleScroll); // damit scroll funktioniert
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isTransparentHero]);
+  }, []);
 
   return (
     <div aria-hidden={openMenu}>

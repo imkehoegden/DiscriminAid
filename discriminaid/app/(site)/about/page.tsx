@@ -19,9 +19,7 @@ export default async function AboutPage() {
   `);
 
   // client.fetch() ist Methode vom Sanity JavaScript Client
-  // das ist GROQ, also Sanity Query Language
-  // die besagt: hol mir das erste dokument vom typ "aboutPage", also [0] gib mir das erste ergebnis zurück
-  // und dann bitte die folgenden felder // dafür brauche ich {}
+  // das ist GROQ, also Sanity Query Language: hol mir das erste dokument vom typ "aboutPage", also [0] gib mir das erste ergebnis zurück und dann bitte die folgenden felder // dafür brauche ich {}
 
   if (!aboutPage) return null;
 

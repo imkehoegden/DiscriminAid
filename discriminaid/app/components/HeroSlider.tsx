@@ -18,7 +18,7 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const current = slides[index];
 
   function nextSlide() {
-    setIndex((prev) => (prev + 1) % slides.length); // modulo brauche ich, damit "Carousel" entsteht, also ein endloser Kreislauf :)
+    setIndex((prev) => (prev + 1) % slides.length); // modulo brauche ich, damit "Carousel" entsteht
   }
 
   function prevSlide() {
