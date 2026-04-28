@@ -53,11 +53,11 @@ export default function InfoBlock({
     );
   };
 
-  const normalizedLink = link?.href
-    ? link
-    : link?.link
-      ? { text: link.text, href: link.link }
-      : undefined;
+  // const normalizedLink = link?.href
+  //   ? link
+  //   : link?.link
+  //     ? { text: link.text, href: link.link }
+  //     : undefined;
 
   return (
     <Section
@@ -77,22 +77,22 @@ export default function InfoBlock({
 
         <p className={`text-base md:text-lg ${textMap[textColor]}`}>{text}</p>
 
-        {normalizedLink?.href &&
-          (isExternal(normalizedLink.href) ? (
+        {link?.href &&
+          (isExternal(link.href) ? (
             <a
-              href={normalizedLink.href}
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition text-base md:text-lg ${textMap[textColor]}`}
             >
-              {normalizedLink.text} <span className="text-xl">›</span>
+              {link.text} <span className="text-xl">›</span>
             </a>
           ) : (
             <Link
-              href={normalizedLink.href}
+              href={link.href}
               className={`inline-block mt-2 underline underline-offset-4 hover:text-[var(--third)] transition text-base md:text-lg ${textMap[textColor]}`}
             >
-              {normalizedLink.text} <span className="text-xl">›</span>
+              {link.text} <span className="text-xl">›</span>
             </Link>
           ))}
       </div>
