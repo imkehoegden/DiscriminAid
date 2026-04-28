@@ -41,8 +41,8 @@ export default function CookieBanner() {
         fontWeight: 600,
       }}
     >
-      Dieses Video wird über Vimeo geladen. Dabei können Cookies von Vimeo
-      gesetzt werden.
+      Videos werden über Vimeo geladen. Dabei können Cookies von Vimeo gesetzt
+      werden.
     </CookieConsent>
   );
 }

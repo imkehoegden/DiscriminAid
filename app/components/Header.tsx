@@ -74,7 +74,7 @@ export default function Header() {
               </Link>
             </li>
             <a
-              href="https://bcause.com/"
+              href="https://bcause.com/orgs/discriminaid"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
