@@ -9,7 +9,7 @@ type InfoBlockProps = {
   title: string;
   subtitle?: string;
   text: string;
-  image: string;
+  image: any;
   imagePosition: "left" | "right";
   link?: {
     text?: string;
@@ -29,6 +29,8 @@ export default function InfoBlock({
   backgroundColor = "secondary",
   textColor = "background",
 }: InfoBlockProps) {
+  if (!image) return null;
+
   const isLeft = imagePosition === "left";
 
   const bgMap = {
@@ -103,7 +105,7 @@ export default function InfoBlock({
         <div className="relative w-full max-w-md aspect-[4/3] overflow-hidden rounded-2xl">
           <Image
             src={urlFor(image).url()}
-            alt={title}
+            alt={title || "Image"}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
