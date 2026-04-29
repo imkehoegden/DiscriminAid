@@ -3,7 +3,8 @@ import TextBlock from "@/app/components/TextBlock";
 import { client } from "@/sanity/lib/client";
 
 export default async function DataprivacyPage() {
-  const dataprivacyPage = await client.fetch(`
+  const dataprivacyPage = await client.fetch(
+    `
     *[_type == "dataprivacyPage"][0]{
     title, 
     content[]{
@@ -13,7 +14,10 @@ export default async function DataprivacyPage() {
         subtitle,
         text
       }
-    }}`);
+    }}`,
+    {},
+    { cache: "no-store" },
+  );
 
   if (!dataprivacyPage) return null;
 
