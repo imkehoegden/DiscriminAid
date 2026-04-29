@@ -12,6 +12,7 @@ import config from "../../../sanity.config";
 
 // export const dynamic = "force-static";
 export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export { metadata, viewport } from "next-sanity/studio";
 
