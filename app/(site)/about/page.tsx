@@ -2,7 +2,8 @@ import InfoBlock from "../../components/InfoBlock";
 import { client } from "@/sanity/lib/sanity";
 
 export default async function AboutPage() {
-  const aboutPage = await client.fetch(`
+  const aboutPage = await client.fetch(
+    `
     *[_type == "aboutPage"][0]{
       title,
       content[]{
@@ -16,7 +17,10 @@ export default async function AboutPage() {
         textColor
       }
     }
-  `);
+  `,
+    {},
+    { cache: "no-store" },
+  );
 
   // client.fetch() ist Methode vom Sanity JavaScript Client
   // das ist GROQ, also Sanity Query Language: hol mir das erste dokument vom typ "aboutPage", also [0] gib mir das erste ergebnis zurück und dann bitte die folgenden felder // dafür brauche ich {}

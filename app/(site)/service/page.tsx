@@ -2,7 +2,8 @@ import InfoBlock from "../../components/InfoBlock";
 import { client } from "@/sanity/lib/sanity";
 
 export default async function ServicePage() {
-  const servicePage = await client.fetch(`
+  const servicePage = await client.fetch(
+    `
     *[_type == "servicePage"][0]{
       title,
       content[]{
@@ -16,7 +17,10 @@ export default async function ServicePage() {
         textColor
       }
     }
-  `);
+  `,
+    {},
+    { cache: "no-store" },
+  );
 
   if (!servicePage) return null;
 

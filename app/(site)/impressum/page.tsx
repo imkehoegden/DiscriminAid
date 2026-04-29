@@ -3,7 +3,8 @@ import { client } from "@/sanity/lib/client";
 import ScrollToTopButton from "@/app/components/ScrollToTopButton";
 
 export default async function ImprintPage() {
-  const imprintPage = await client.fetch(`
+  const imprintPage = await client.fetch(
+    `
     *[_type == "imprintPage"][0]{
     title, 
     content[]{
@@ -13,7 +14,10 @@ export default async function ImprintPage() {
         subtitle,
         text
       }
-    }}`);
+    }}`,
+    {},
+    { cache: "no-store" },
+  );
 
   if (!imprintPage) return null;
 

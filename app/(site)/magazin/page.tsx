@@ -3,7 +3,8 @@ import MagazinBlock from "@/app/components/MagazinBlock";
 import ScrollToTopButton from "@/app/components/ScrollToTopButton";
 
 export default async function MagazinPage() {
-  const magazinePage = await client.fetch(`
+  const magazinePage = await client.fetch(
+    `
     *[_type == "magazinPage"][0]{
       title,
       content[]{
@@ -19,7 +20,10 @@ export default async function MagazinPage() {
         }
       }
     }
-  `);
+  `,
+    {},
+    { cache: "no-store" },
+  );
 
   if (!magazinePage) return null;
 

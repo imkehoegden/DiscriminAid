@@ -6,11 +6,15 @@ import InfoBlock from "../components/InfoBlock";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default async function Home() {
-  const homePage = await client.fetch(`
+  const homePage = await client.fetch(
+    `
   *[_type == "homePage"][0]{
     content
   }
-`);
+`,
+    {},
+    { cache: "no-store" },
+  );
 
   if (!homePage) return null;
 
