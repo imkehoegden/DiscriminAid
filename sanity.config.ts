@@ -27,7 +27,7 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     // presentationTool({
     //   previewUrl: {
-    //     origin: "http://localhost:3000", // dise Domain beim Deployen anpassen
+    //     origin: "http://localhost:3000", // diese Domain beim Deployen anpassen
     //   },
     // }),
   ],
