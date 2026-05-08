@@ -59,13 +59,13 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
         <div className="absolute bottom-8 flex justify-center items-center gap-10 text-6xl w-full left-0">
           <button
             onClick={prevSlide}
-            className="cursor-pointer hover:scale-125 transition"
+            className="cursor-pointer hover:scale-110 transition-transform"
           >
             ‹
           </button>
           <button
             onClick={nextSlide}
-            className="cursor-pointer hover:scale-125 transition"
+            className="cursor-pointer hover:scale-110 transition-transform"
           >
             ›
           </button>

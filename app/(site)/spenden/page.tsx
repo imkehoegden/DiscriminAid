@@ -5,7 +5,7 @@ export default function DonationPage() {
         <h1 className="text-5xl text-center font-bold mb-12">Spenden!</h1>
       </div>
 
-      <div className=" bg-orange-400 w-full py-14 px-4">
+      <div className="bg-[var(--primary)] w-full py-14 px-4">
         <iframe
           src="https://bcause.com/embed/transaction/frc-309996941579960320"
           className="block w-full max-w-[600px] min-h-[800px] rounded-[20px] border-0 mx-auto"

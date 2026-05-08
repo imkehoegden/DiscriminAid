@@ -52,7 +52,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+                className="inline-block nav cursor-pointer hover:scale-110 transition-transform"
               >
                 Wer wir sind
               </Link>
@@ -60,7 +60,7 @@ export default function Header() {
             <li>
               <Link
                 href="/service"
-                className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+                className="nav cursor-pointer hover:scale-110 transition-transform"
               >
                 Unterstützung finden
               </Link>
@@ -68,7 +68,7 @@ export default function Header() {
             <li>
               <Link
                 href="/magazin"
-                className="nav cursor-pointer hover:text-[var(--secondarytext)] transition"
+                className="nav cursor-pointer hover:scale-110 transition-transform"
               >
                 Stimmen & Magazin
               </Link>
