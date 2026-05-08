@@ -28,14 +28,14 @@ export default async function MagazinPage() {
   if (!magazinePage) return null;
 
   return (
-    <div className="w-full py-16 px-6 md:px-16">
+    <div className="w-full py-12 px-6 md:px-16">
       {magazinePage.title && (
         <h1 className="text-5xl text-center font-bold mb-12">
           {magazinePage.title}
         </h1>
       )}
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col py-12 gap-10">
         {magazinePage.content?.map((block: any, index: number) => {
           switch (block._type) {
             case "magazinBlock":
@@ -46,7 +46,7 @@ export default async function MagazinPage() {
           }
         })}
       </div>
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
     </div>
   );
 }
