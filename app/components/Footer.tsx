@@ -16,7 +16,7 @@ export default function Footer() {
         <li>
           <Link
             href="/impressum"
-            className="cursor-pointer transition hover:text-[var(--secondarytext)]"
+            className="cursor-pointer hover:scale-110 transition-transform"
           >
             Impressum
           </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
         <li>
           <Link
             href="/datenschutz"
-            className="cursor-pointer transition hover:text-[var(--secondarytext)]"
+            className="cursor-pointer hover:scale-110 transition-transform"
           >
             Datenschutz
           </Link>
