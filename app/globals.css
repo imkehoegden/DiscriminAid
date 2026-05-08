@@ -36,9 +36,11 @@ h2,
   cursor: pointer;
 }
 
-.donateButton:hover {
+.donateButton:hover,
+.scrollToTopButton:hover {
   background-color: var(--primarytext);
   color: var(--background);
+  scale: 1.05;
   transition: all 0.3s ease;
 }
 
