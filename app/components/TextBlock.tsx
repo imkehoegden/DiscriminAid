@@ -64,7 +64,7 @@ export default function TextBlock({ title, subtitle, text }: TextBlockProps) {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-2 underline underline-offset-4 hover:text-[var(--secondarytext)] transition"
+              className="inline-block mt-2 underline underline-offset-4 hover:scale-105 transition-transform"
             >
               {children}
             </a>
@@ -74,7 +74,7 @@ export default function TextBlock({ title, subtitle, text }: TextBlockProps) {
         return (
           <Link
             href={href}
-            className="inline-block mt-2 underline underline-offset-4 hover:text-[var(--secondarytext)] transition"
+            className="inline-block mt-2 underline underline-offset-4 hover:scale-105 transition-transform"
           >
             {children}
           </Link>

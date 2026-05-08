@@ -1,7 +1,6 @@
 import HeroSlider from "../components/HeroSlider";
 import Video from "../components/Video";
 import { client } from "../../sanity/lib/sanity";
-// import { VideoSection } from "../components/VideoSection";
 import InfoBlock from "../components/InfoBlock";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
