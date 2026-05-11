@@ -14,9 +14,9 @@ export default function SiteLayout({
 
   return (
     <>
-      <div>
+      <div className="min-h-screen flex flex-col">
         <Header />
-        <main className={`flex-1 min-h-[88.3vh] ${isHome ? "pt-0" : "pt-36"}`}>
+        <main className={`flex-1  ${isHome ? "pt-0" : "pt-36"}`}>
           {children}
         </main>
         <Footer />
