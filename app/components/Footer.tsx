@@ -42,7 +42,7 @@ export default function Footer() {
               width={30}
               height={30}
               loading="eager"
-              className="h-auto w-auto"
+              className="h-auto w-auto hover:scale-105"
             />
           </a>
         </li>

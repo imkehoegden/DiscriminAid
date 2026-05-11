@@ -28,7 +28,7 @@ export default function Header() {
     <div aria-hidden={openMenu}>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-          scrolled ? "bg-white" : "bg-transparent"
+          scrolled ? "bg-[var(--background)]" : "bg-transparent"
         }`}
       >
         <nav className="flex items-center justify-between px-6 md:px-10 lg:px-20 py-6 md:py-8 lg:py-10 gap-8 sticky text-[var(--primarytext)]">
@@ -41,10 +41,6 @@ export default function Header() {
                 className="object-contain"
                 priority
                 sizes="(max-width: 768px) 180px, (max-width: 1024px) 240px, 350px"
-                // width={350}
-                // height={91}
-                // loading="eager"
-                // className="h-10 md:h-16 lg:h-24 w-auto"
               />
             </Link>
           </div>
@@ -129,15 +125,13 @@ export default function Header() {
           >
             Stimmen & Magazin
           </Link>
-          <li>
-            <Link
-              href="/spenden"
-              onClick={() => setOpenMenu(false)}
-              className="nav"
-            >
-              <button className="donateButton">Spenden! ♥</button>
-            </Link>
-          </li>
+          <Link
+            href="/spenden"
+            onClick={() => setOpenMenu(false)}
+            className="nav"
+          >
+            <button className="donateButton">Spenden! ♥</button>
+          </Link>
         </div>
       )}
     </div>

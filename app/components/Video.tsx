@@ -1,8 +1,9 @@
 "use client";
 
 import Section from "./Section";
-import Cookies from "js-cookie";
-import { useState, useEffect } from "react";
+// import Cookies from "js-cookie";
+// import { useState, useEffect } from "react";
+import { useConsent } from "@/app/hooks/useConsent";
 
 type VideoProps = {
   title?: string;
@@ -13,20 +14,22 @@ type VideoProps = {
 export default function Video({ title, subtitle, url }: VideoProps) {
   if (!url) return null;
 
-  const [consent, setConsent] = useState(false);
+  const consent = useConsent("vimeo_consent");
 
-  useEffect(() => {
-    const checkConsent = () => {
-      setConsent(Cookies.get("vimeo_consent") === "true");
-    };
+  // const [consent, setConsent] = useState(false);
 
-    checkConsent();
+  // useEffect(() => {
+  //   const checkConsent = () => {
+  //     setConsent(Cookies.get("vimeo_consent") === "true");
+  //   };
 
-    window.addEventListener("vimeo_consent_change", checkConsent);
+  //   checkConsent();
 
-    return () =>
-      window.removeEventListener("vimeo_consent_change", checkConsent);
-  }, []);
+  //   window.addEventListener("vimeo_consent_change", checkConsent);
+
+  //   return () =>
+  //     window.removeEventListener("vimeo_consent_change", checkConsent);
+  // }, []);
 
   const embedUrl = url.replace("vimeo.com", "player.vimeo.com/video");
 
@@ -48,7 +51,7 @@ export default function Video({ title, subtitle, url }: VideoProps) {
         </div>
       ) : (
         <p className="text-base md:text-lg font-[var(--font-body)]">
-          Bitte akzeptiere Cookies, um dieses Video anzuzeigen.
+          Bitte akzeptiere die Vimeo-Cookies, um dieses Video anzuzeigen.
         </p>
       )}
     </Section>
