@@ -12,7 +12,7 @@ export default function DonationPage() {
         <h1 className="text-5xl text-center font-bold mb-12">Spenden!</h1>
       </div>
 
-      <div className="bg-[var(--primary)] py-12 px-6 md:px-16 min-h-[58.3vh]">
+      <div className="bg-[var(--primary)] py-12 px-6 md:px-16 min-h-[59vh]">
         {!consent ? (
           <div className="max-w-5xl mx-auto py-4 px-6 text-left flex flex-col gap-4">
             <p className="text-base md:text-lg font-[var(--font-body)] m-0">
