@@ -73,14 +73,6 @@ export default function Header() {
                 Stimmen & Magazin
               </Link>
             </li>
-            {/* <a
-              href="https://bcause.com/orgs/discriminaid"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <button className="donateButton">Spenden! ♥</button>
-            </a> */}
             <li>
               <Link href="/spenden" className="cursor-pointer">
                 <button className="donateButton">Spenden! ♥</button>
@@ -146,15 +138,6 @@ export default function Header() {
               <button className="donateButton">Spenden! ♥</button>
             </Link>
           </li>
-          {/* <a
-            href="https://bcause.com/orgs/discriminaid"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpenMenu(false)}
-            className="nav"
-          >
-            <button className="donateButton">Spenden! ♥</button>
-          </a> */}
         </div>
       )}
     </div>
