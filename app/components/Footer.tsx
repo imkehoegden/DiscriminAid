@@ -31,7 +31,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/discriminaid"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer"
@@ -39,6 +39,23 @@ export default function Footer() {
             <Image
               src="/icon-instagram-50-white.png"
               alt="Icon Instagram"
+              width={30}
+              height={30}
+              loading="eager"
+              className="h-auto w-auto hover:scale-105"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/company/discriminaid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <Image
+              src="/icon-linkedin-120-white.png"
+              alt="Icon LinkedIn"
               width={30}
               height={30}
               loading="eager"
